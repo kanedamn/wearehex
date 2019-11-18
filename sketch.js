@@ -7,8 +7,8 @@ function preload(){
 var timeLeft = function(){
     var currentDate = new Date();
     currentDate = currentDate.getTime();
-    var endDate = new Date("2020-03-13 00:00:00");
-    if (parseInt((endDate-currentDate)/1000)<0){return 0}
+    var endDate = new Date("2020-03-13T00:00:00");
+    if (parseInt((endDate-currentDate)/1000)<0){return 0};
     return parseInt((endDate-currentDate)/1000);
 }
 
@@ -17,9 +17,9 @@ var timerText = function(){
     var m = String(parseInt(timer / 60)%60);
     var s = String(timer - 3600*h - 60*m);
 
-    if (h.length == 1){h="0"+h;}
-    if (m.length == 1){m="0"+m;}
-    if (s.length == 1){s="0"+s;}
+    if (h.length == 1){h="0"+h;};
+    if (m.length == 1){m="0"+m;};
+    if (s.length == 1){s="0"+s;};
 
 
     return h+":"+m+":"+s;
