@@ -46,7 +46,8 @@ function fireshow(){
 var timer = timeLeft();
 
 function setup(){
-    createCanvas (innerWidth,innerHeight);
+    createCanvas (innerWidth,
+                  innerHeight);
 }
 
 function draw() {
