@@ -33,7 +33,7 @@ function countDown(){
     textSize(100);
     textFont(font);
     fill(255, 0, 0);
-    text(timerText(), width/2, height/2);
+    text(timerText(), width/2, height/2 - 300);
 }
 
 
@@ -59,13 +59,13 @@ function setup(){
 //crea area dove inserire password
     pass = createInput("Enter password");
     pass.style("font-size: 40px");
-    pass.position(width/2, height/2 + 85);
+    pass.position(width/2, height/2 + 400);
 
 //crea pulsante per validare password
     buttonSub = createButton("submit");
     buttonSub.style("font-size: 30px");
     buttonSub.style("translate: -50%, -50%");
-    buttonSub.position(width/2 - 50, height/2 + 170);
+    buttonSub.position(width/2 - 50, height/2 + 500);
 
     buttonSub.mousePressed(goToPage);
 }
