@@ -56,7 +56,7 @@ function setup(){
 }
 
 function goToPage(){
-  if(pass.value() == ("ganga")){
+  if(pass.value() == ("HEX")){
     window.open('index_2.html', "_self");
   }
 }
