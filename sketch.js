@@ -1,6 +1,6 @@
 var font;
-var endDate;
 var pass;
+var advice;
 
 function preload(){
   font = loadFont("./assets/Cygnito Mono.ttf");
@@ -30,7 +30,7 @@ var timerText = function(){
 
 function countDown(){
     textAlign(CENTER, CENTER);
-    textSize(50);
+    textSize(100);
     textFont(font);
     fill(255, 0, 0);
     text(timerText(), width/2, height/2);
@@ -46,15 +46,35 @@ var timer = timeLeft();
 function setup(){
     createCanvas (innerWidth, innerHeight);
 
-    pass = createInput("Enter password");
-    pass.position(width/2, height/2 + 45);
+//crea pulsante che porta a pagina di testo
+    advice = createButton("fra.txt");
+    advice.style("background-color: black");
+    advice.style("font-size: 15px");
+    advice.style("color: red");
+    advice.style("border: black");
+    advice.position(width/2 + 260, height/2 + 35);
 
-    buttonSub = createButton('submit');
-    buttonSub.position(width/2 - 25, height/2 + 72);
+    advice.mousePressed(showText);
+
+//crea area dove inserire password
+    pass = createInput("Enter password");
+    pass.style("font-size: 40px");
+    pass.position(width/2, height/2 + 85);
+
+//crea pulsante per validare password
+    buttonSub = createButton("submit");
+    buttonSub.style("font-size: 30px");
+    buttonSub.position(width/2 - 50, height/2 + 150);
 
     buttonSub.mousePressed(goToPage);
 }
 
+//funzione che mostra il testo quando si clicca il pulsante advice
+function showText(){
+  window.open('text.html');
+}
+
+//funzione che va alla pagina finale se si inserisce la password giusta
 function goToPage(){
   if(pass.value() == ("HEX")){
     window.open('index_2.html', "_self");

@@ -30,13 +30,13 @@ var timerText = function(){
 
 function countDown(){
     textAlign(CENTER, CENTER);
-    textSize(21);
+    textSize(40);
     textFont(font);
     fill(255, 0, 0);
-    text("TI SEI SALVATO, PER ORA", width/2, height/2 - 40);
+    text("TI SEI SALVATO, PER ORA", width/2, height/2 - 60);
 
     textAlign(CENTER, CENTER);
-    textSize(50);
+    textSize(100);
     textFont(font);
     fill(255, 0, 0);
     text(timerText(), width/2, height/2);
