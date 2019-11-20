@@ -1,6 +1,6 @@
 var font;
 var endDate;
-var pass;
+var input;
 
 function preload(){
   font = loadFont("./assets/Cygnito Mono.ttf");
@@ -9,7 +9,7 @@ function preload(){
 var timeLeft = function(){
     var currentDate = new Date();
     currentDate = currentDate.getTime();
-    var endDate = new Date("2019-11-29T00:00:00");
+    var endDate = new Date("2020-03-13T00:00:00");
     if (parseInt((endDate-currentDate)/1000)<0){return 0};
     return parseInt((endDate-currentDate)/1000);
 }
@@ -30,6 +30,12 @@ var timerText = function(){
 
 function countDown(){
     textAlign(CENTER, CENTER);
+    textSize(21);
+    textFont(font);
+    fill(255, 0, 0);
+    text("TI SEI SALVATO, PER ORA", width/2, height/2 - 40);
+
+    textAlign(CENTER, CENTER);
     textSize(50);
     textFont(font);
     fill(255, 0, 0);
@@ -38,7 +44,11 @@ function countDown(){
 
 
 function fireshow(){
-    background(0);
+    textAlign(CENTER, CENTER);
+    textSize(50);
+    textFont(font);
+    fill(255);
+    text("APRI GLI OCCHI", width/2, height/2);
 }
 
 var timer = timeLeft();
@@ -46,19 +56,6 @@ var timer = timeLeft();
 function setup(){
     createCanvas (innerWidth, innerHeight);
 
-    pass = createInput("Enter password");
-    pass.position(width/2, height/2 + 45);
-
-    buttonSub = createButton('submit');
-    buttonSub.position(width/2 - 25, height/2 + 72);
-
-    buttonSub.mousePressed(goToPage);
-}
-
-function goToPage(){
-  if(pass.value() == ("ganga")){
-    window.open('index_2.html', "_self");
-  }
 }
 
 function draw() {
