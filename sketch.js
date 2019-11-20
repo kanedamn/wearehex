@@ -64,7 +64,8 @@ function setup(){
 //crea pulsante per validare password
     buttonSub = createButton("submit");
     buttonSub.style("font-size: 30px");
-    buttonSub.position(width/2 - 50, height/2 + 150);
+    buttonSub.style("translate: -50%, -50%");
+    buttonSub.position(width/2 - 50, height/2 + 170);
 
     buttonSub.mousePressed(goToPage);
 }
