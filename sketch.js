@@ -77,7 +77,7 @@ function showText(){
 
 //funzione che va alla pagina finale se si inserisce la password giusta
 function goToPage(){
-  if(pass.value() == ("HEX")){
+  if(pass.value() == ("amuleto")){
     window.open('index_2.html', "_self");
   }
 }
