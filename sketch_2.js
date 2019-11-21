@@ -65,7 +65,8 @@ function draw() {
     textSize(40);
     textFont(font);
     fill(255, 0, 0);
-    text("TI SEI SALVATO, PER ORA", width/2, height/2);
+    text("TI SEI SALVATO", width/2, height/2);
+    text("PER ORA", width/2, height/2 + 50);
 
     // if (frameCount % 60 == 0 && timer > 0) {
     //     timer --;
