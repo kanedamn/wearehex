@@ -1,9 +1,12 @@
 var font;
 var pass;
 var advice;
+var myImg;
+var show = false;
 
 function preload(){
   font = loadFont("./assets/Cygnito Mono.ttf");
+  myImg = loadImage("./assets/password.png");
 }
 
 var timeLeft = function(){
@@ -33,7 +36,7 @@ function countDown(){
     textSize(100);
     textFont(font);
     fill(255, 0, 0);
-    text(timerText(), width/2, height/2 - 300);
+    text(timerText(), width/2, height/2 - 150);
 }
 
 
@@ -46,35 +49,25 @@ var timer = timeLeft();
 function setup(){
     createCanvas (innerWidth, innerHeight);
 
-//crea pulsante che porta a pagina di testo
-    advice = createButton("fra.txt");
-    advice.style("background-color: black");
-    advice.style("font-size: 15px");
-    advice.style("color: red");
-    advice.style("border: black");
-    advice.position(width/2 + 260, height/2 + 35);
-
-    advice.mousePressed(showText);
+// crea pulsante che porta a indizio
+    advice = createButton("Ferro");
+    advice.style("font-size: 50px");
+    advice.position(width/2 + 80, height/2 - 15);
+    advice.mousePressed(showImg);
 
 //crea area dove inserire password
     pass = createInput("Enter password");
-    pass.style("font-size: 30px");
-    pass.style("font-family: Cygnito Mono");
     pass.position(width/2, height/2 + 400);
 
 //crea pulsante per validare password
     buttonSub = createButton("submit");
-    buttonSub.style("font-size: 30px");
-    buttonSub.style("font-family: Cygnito Mono");
-    // buttonSub.style("translate: -50%, -50%");
-    buttonSub.position(width/2 - 50, height/2 + 500);
-
+    buttonSub.position(width/2, height/2 + 470);
     buttonSub.mousePressed(goToPage);
 }
 
-//funzione che mostra il testo quando si clicca il pulsante advice
-function showText(){
-  // window.open('text.html');
+//funzione che mostra l'indizio quando si clicca il pulsante advice
+function showImg(){
+  show = true;
 }
 
 //funzione che va alla pagina finale se si inserisce la password giusta
@@ -95,5 +88,15 @@ function draw() {
         fireshow();
     } else {
         countDown();
+    }
+
+    textFont(font);
+    textSize(50);
+    fill(255, 0, 0);
+    text("Tocca", width/2 - 90, height/2);
+
+    if(show == true){
+      imageMode(CENTER);
+      image(myImg, width/2, height/2 - 400, myImg.width, myImg.height);
     }
 }
