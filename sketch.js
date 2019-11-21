@@ -2,11 +2,13 @@ var font;
 var pass;
 var advice;
 var myImg;
+var error;
 var show = false;
 
 function preload(){
   font = loadFont("./assets/Cygnito Mono.ttf");
   myImg = loadImage("./assets/password.png");
+  error = loadImage("./assets/error.png");
 }
 
 var timeLeft = function(){
@@ -80,6 +82,9 @@ function showImg(){
 function goToPage(){
   if(pass.value() == ("iocicredo") || pass.value() == ("Iocicredo")){
     window.open('index_2.html', "_self");
+  } else{
+    imageMode(CENTER);
+    image(error, width/2, height/2 + 300, error.width, error.height);
   }
 }
 
