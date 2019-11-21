@@ -52,7 +52,7 @@ function setup(){
 // crea pulsante che porta a indizio
     advice = createButton("Ferro");
     advice.style("font-size: 50px");
-    advice.position(width/2 + 80, height/2 - 15);
+    advice.position(width/2 + 90, height/2 - 15);
     advice.mousePressed(showImg);
 
 //crea area dove inserire password
@@ -93,7 +93,7 @@ function draw() {
     textFont(font);
     textSize(50);
     fill(255, 0, 0);
-    text("Tocca", width/2 - 90, height/2);
+    text("Tocca", width/2 - 80, height/2);
 
     if(show == true){
       imageMode(CENTER);
