@@ -58,12 +58,14 @@ function setup(){
 
 //crea area dove inserire password
     pass = createInput("Enter password");
-    pass.style("font-size: 40px");
+    pass.style("font-size: 30px");
+    pass.style("font-family: Cygnito Mono");
     pass.position(width/2, height/2 + 400);
 
 //crea pulsante per validare password
     buttonSub = createButton("submit");
     buttonSub.style("font-size: 30px");
+    buttonSub.style("font-family: Cygnito Mono");
     buttonSub.style("translate: -50%, -50%");
     buttonSub.position(width/2 - 50, height/2 + 500);
 
