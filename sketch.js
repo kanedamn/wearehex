@@ -67,7 +67,6 @@ function setup(){
 }
 
 function changeValue(){
-  console.log("wew");
   pass.value("");
 }
 
