@@ -66,7 +66,7 @@ function setup(){
     buttonSub = createButton("submit");
     buttonSub.style("font-size: 30px");
     buttonSub.style("font-family: Cygnito Mono");
-    buttonSub.style("translate: -50%, -50%");
+    // buttonSub.style("translate: -50%, -50%");
     buttonSub.position(width/2 - 50, height/2 + 500);
 
     buttonSub.mousePressed(goToPage);
@@ -74,7 +74,7 @@ function setup(){
 
 //funzione che mostra il testo quando si clicca il pulsante advice
 function showText(){
-  window.open('text.html');
+  // window.open('text.html');
 }
 
 //funzione che va alla pagina finale se si inserisce la password giusta
