@@ -56,6 +56,7 @@ function preload(){
 function setup(){
     createCanvas (innerWidth, innerHeight);
 
+    occhio = loadImage("./assets/occhio.png");
 }
 
 function draw() {
@@ -67,6 +68,9 @@ function draw() {
     fill(255, 0, 0);
     text("TI SEI SALVATO", width/2, height/2);
     text("PER ORA", width/2, height/2 + 50);
+
+    imageMode(CENTER);
+    image(occhio, width/2, height/2 - 250, occhio.width, occhio.height);
 
     // if (frameCount % 60 == 0 && timer > 0) {
     //     timer --;

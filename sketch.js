@@ -78,7 +78,7 @@ function showImg(){
 
 //funzione che va alla pagina finale se si inserisce la password giusta
 function goToPage(){
-  if(pass.value() == ("iocicredo")){
+  if(pass.value() == ("iocicredo") || pass.value() == ("Iocicredo")){
     window.open('index_2.html', "_self");
   }
 }
