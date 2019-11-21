@@ -58,11 +58,17 @@ function setup(){
 //crea area dove inserire password
     pass = createInput("Enter password");
     pass.position(width/2, height/2 + 400);
+    pass.mousePressed(changeValue);
 
 //crea pulsante per validare password
     buttonSub = createButton("submit");
     buttonSub.position(width/2, height/2 + 470);
     buttonSub.mousePressed(goToPage);
+}
+
+function changeValue(){
+  console.log("wew");
+  pass.value("");
 }
 
 //funzione che mostra l'indizio quando si clicca il pulsante advice
