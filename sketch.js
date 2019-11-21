@@ -62,6 +62,7 @@ function setup(){
 
 //crea pulsante per validare password
     buttonSub = createButton("submit");
+    buttonSub.style("border-color: red");
     buttonSub.position(width/2, height/2 + 470);
     buttonSub.mousePressed(goToPage);
 }
