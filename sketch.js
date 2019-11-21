@@ -4,6 +4,7 @@ var advice;
 var myImg;
 var error;
 var show = false;
+var wrong = false;
 
 function preload(){
   font = loadFont("./assets/Cygnito Mono.ttf");
@@ -83,8 +84,7 @@ function goToPage(){
   if(pass.value() == ("iocicredo") || pass.value() == ("Iocicredo")){
     window.open('index_2.html', "_self");
   } else{
-    imageMode(CENTER);
-    image(error, width/2, height/2 + 300, error.width, error.height);
+    wrong = true;
   }
 }
 
@@ -109,5 +109,10 @@ function draw() {
     if(show == true){
       imageMode(CENTER);
       image(myImg, width/2, height/2 - 400, myImg.width, myImg.height);
+    }
+
+    if(wrong ==true){
+      imageMode(CENTER);
+      image(error, width/2, height/2 + 200, error.width, error.height);
     }
 }
