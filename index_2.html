@@ -6,7 +6,7 @@
     <title>HEX</title>
     <style>
     @font-face { font-family: Cygnito Mono; src: url('assets/Cygnito Mono.ttf'); }
-    
+
     body {
       padding: 0;
       margin: 0;
@@ -16,6 +16,10 @@
       overflow-x: hidden;
       overflow-y: hidden;
       }
+
+    html, body.disable-dbl-tap-zoom {
+      touch-action: manipulation;
+    }
 
     body {
       position: relative;
