@@ -21,10 +21,14 @@
 
       <script>document.write('<base href="' + document.location + '" />');</script>
       <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.22/angular.js" data-semver="1.2.22"></script>
-      <script src="app_indizio1.js"></script>
+      <script src="app_arrendo.js"></script>
       <script src="../addons/dirTerminalType.js"></script>
       <script src="../addons/dirTerminalType.spec.js"></script>
       <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+      <script src="p5.min.js"></script>
+      <script src="../addons/p5.dom.min.js"></script>
+      <script src="sketch_arrendo.js"></script>
 
   </head>
   <style>
@@ -59,27 +63,13 @@
   }
 
   p{
+    position: absolute;
     color: red;
-    font-size: 45px;
+    font-size: 50px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: "Cygnito Mono";
-  }
-
-  div{
-    position: fixed;
-    top: 92%;
-    left: 50%;
-    width: 92%;
-    height: 86%;
-    transform: translate(-50%, -50%);
-  }
-
-  #password{
-    position: fixed;
-    top: 120%;
-    left: 50%;
-    width: 92%;
-    height: 86%;
-    transform: translate(-50%, -50%);
   }
 
   button {
@@ -87,62 +77,48 @@
     background-color: transparent;
     border-color: transparent;
     color: red;
-    font-size: 45px;
-    font-family: "Cygnito Mono";
+    font-size: 50px;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, 80%);
-  }
-
-  #arrendo{
-    position: absolute;
-    background-color: transparent;
-    border-color: transparent;
-    color: red;
-    font-size: 45px;
+    transform: translate(-50%, -50%);
     font-family: "Cygnito Mono";
-    transform: translate(-50%, 200%);
   }
 
-  form{
-    font-size: 45px;
-    font-family: "Cygnito Mono";
-    color: red;
-  }
-
-  img{
-    max-width: 30vh;
+  #icona {
+    max-width: 15vh;
     height: auto;
-    position: absolute;
-    top: 35%;
+    position: fixed;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
+  #spoopy {
+    max-width: 40vh;
+    height: auto;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite alternate;
+  }
+
+  @keyframes pulse{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+
   </style>
   <body ng-controller="MainCtrl">
-    <div>
-      <h1 dir-terminal-type="" on-completion="p1 = true"></h1>
+    <h1 dir-terminal-type="" on-completion="p1 = true"></h1>
 
-      <p dir-terminal-type="" start-typing="p1" ng-show="p1" on-completion="p2 = true">
-        > primo indizio:</p>
+    <!-- <p dir-terminal-type="" start-typing="p1" ng-show="p1" on-completion="p2 = true">
+      VUOI SALVARTI?</p> -->
 
-      <p dir-terminal-type="" start-typing="p2" ng-show="p2" on-completion="p3 = true">
-        > per salvarti dovrai inserire la password nel monitor fuori uso</p>
-    </div>
+    <button ng-show="p1" on-completion="p2 = true">
+      SEI MORTO</button>
 
-    <div id="password">
-      <button onclick="goToPage()" ng-show="p3">
-        [ CONTINUA ]</button>
-
-      <button id="arrendo" onclick="window.location.href= '../Arrendo/index_arrendo.html'" ng-show="p3">
-        [ MI ARRENDO ]</button>
-      </div>
-
-    <img src="../assets/occhio.png" alt>
+    <img src="../assets/occhioicona.png" id="icona" alt>
+    <img src="../assets/scheletro.png" id="spoopy" alt>
   </body>
-
-  <script src="../p5.min.js"></script>
-  <script src="../addons/p5.dom.min.js"></script>
-  <script src="sketch_indizio1.js"></script>
-
 </html>
