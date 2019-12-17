@@ -30,6 +30,9 @@ setup = function(){
     }
 
     stradaY = height;
+
+    var score = localStorage.setItem("score", localStorage.score- 250);
+    console.log(score);
 }
 
 draw = function() {
@@ -101,8 +104,8 @@ function Cat() {
   }
 
   this.dead = function() {
-    var d = dist(tocco, windowHeight / 2, this.x, this.y);
-    if (d < 320) {
+    var d = dist(tocco, windowHeight / 3, this.x, this.y);
+    if (d < 120) {
       return true;
     } else {
       return false;

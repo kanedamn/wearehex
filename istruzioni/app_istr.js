@@ -14,5 +14,7 @@ app.controller('MainCtrl', function($scope, $timeout) {
     document.getElementById("idInput").blur();
   }
 
-    var idValue = document.getElementById("idInput").value;
+  goToPage = function(){
+    window.open('../Prova 0/index_prova0.html', "_self");
+  }
 });

@@ -3,6 +3,8 @@ var occhio;
 var error;
 var id;
 
+var startTime;
+
 function preload() {
   font = loadFont("../assets/Cygnito Mono.ttf");
   occhio = loadImage("../assets/occhio.png");
