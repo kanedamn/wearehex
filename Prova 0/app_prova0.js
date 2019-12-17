@@ -21,7 +21,7 @@ app.controller('MainCtrl', function($scope, $timeout) {
   }
 
   goToPage = function(){
-    if(document.getElementById("myInput").value == ("iocicredo")){
+    if(document.getElementById("myInput").value == ("salvami") || document.getElementById("myInput").value == ("Salvami")){
       window.open('../Prova 1/index_prova1.html', "_self");
     } else{
       document.getElementById("error").style.opacity = 1;

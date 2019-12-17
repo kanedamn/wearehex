@@ -21,9 +21,9 @@ app.controller('MainCtrl', function($scope, $timeout) {
   }
 
   goToPage = function(){
-    if(document.getElementById("myInput").value == ("iocicredo")){
+    if(document.getElementById("myInput").value == ("sopracampa") || document.getElementById("myInput").value == ("Sopracampa")){
       window.open('../Indizio 1/index_indizio1.html', "_self");
-    } else if(document.getElementById("myInput").value == ("iono")){
+    } else if(document.getElementById("myInput").value == ("sottocrepa") || document.getElementById("myInput").value == ("Sottocrepa")){
       window.open('../Miniprova 1/index_mini1.html', "_self");
     }
     else{

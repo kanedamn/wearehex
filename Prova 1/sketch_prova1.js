@@ -1,6 +1,7 @@
 var font;
 var occhio;
 var error;
+var id;
 
 function preload() {
   font = loadFont("../assets/Cygnito Mono.ttf");
