@@ -1,10 +1,10 @@
 var cats = [];
 var amountOfCats = 3;
-var tocco;
+// var tocco;
 var finalScore = 0;
 var font;
 
-var muovi = false;
+// var muovi = false;
 
 var gatto;
 var macch;
@@ -24,7 +24,7 @@ setup = function(){
     canvas.position(windowWidth/2 - 450, windowHeight/2 - 500);
    	background(0);
 
-    tocco = 0;
+    // tocco = 0;
 
     for(var i = 0; i < amountOfCats; i++) {
       var movingCats = new Cat();
@@ -55,15 +55,16 @@ draw = function() {
   }
 
   //move car as cursor
-  if(muovi == false){
-    tocco = 700;
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
-
-  if(muovi == true){
-    tocco = mouseX;
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
+  image(macch, mouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // if(muovi == false){
+  //   tocco = 700;
+  //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // }
+  //
+  // if(muovi == true){
+  //   tocco = mouseX;
+  //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // }
 
   // if (touches.length > 0) {
   //   tocco = touches[0].x;
@@ -101,13 +102,13 @@ draw = function() {
 
 }
 
-function touchStarted(){
-  muovi = true;
-}
-
-function touchEnded(){
-  muovi = false;
-}
+// function touchStarted(){
+//   muovi = true;
+// }
+//
+// function touchEnded(){
+//   muovi = false;
+// }
 
 function Cat() {
   this.x = random(canvas.width - 100, 100);
@@ -124,7 +125,7 @@ function Cat() {
   }
 
   this.dead = function() {
-    var d = dist(tocco, windowHeight / 3, this.x, this.y);
+    var d = dist(mouseX, windowHeight / 3, this.x, this.y);
     if (d < 120) {
       return true;
     } else {
