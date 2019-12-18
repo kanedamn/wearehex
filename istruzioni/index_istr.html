@@ -131,16 +131,16 @@
         > puoi arrenderti in qualsiasi momento</p>
 
       <p dir-terminal-type="" start-typing="p6" ng-show="p6" on-completion="p7 = true">
-        > ma facendolo morirai ¯\_(ツ)_/¯</p>
+        > ma facendolo morirai</p>
 
       <p dir-terminal-type="" remove-caret="0" start-typing="p7" ng-show="p7" on-completion="showInputForm()">
         > scegli un codice identificativo</p>
 
       <form ng-submit="textEntered()" ng-show="showform">
-        >_ <input type="text" maxlength="3" ng-model="idInput" id="idInput" autofocus on-completion="p8 = true">
+        >_ <input type="text" maxlength="3" ng-model="idInput" id="idInput" autofocus>
       </form>
 
-      <button onclick="goToPage()" ng-show="p8">
+      <button onclick="goToPage()" ng-show="p7">
         [ INIZIA ]</button>
 
     </div>

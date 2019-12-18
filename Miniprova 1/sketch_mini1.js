@@ -72,11 +72,11 @@ draw = function() {
     }
   }
 
-  if(finalScore >= 3 && frameCount > 600){
+  if(finalScore >= 3 && frameCount > 500){
     window.open('../Indizio 1/index_indizio1.html', "_self");
   }
 
-  if(finalScore <= 2 && frameCount > 600){
+  if(finalScore <= 2 && frameCount > 500){
     window.open('../Riprova/index_riprova.html', "_self");
   }
 
