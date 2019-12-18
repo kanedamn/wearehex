@@ -121,3 +121,7 @@ function Cat() {
 function touchMoved() {
   return false;
 }
+
+function touchEnded(event) {
+  DeviceOrientationEvent.requestPermission()
+}
