@@ -73,12 +73,21 @@
     transform: translate(-50%, -50%);
   }
 
+  #password{
+    position: fixed;
+    top: 110%;
+    left: 50%;
+    width: 92%;
+    height: 86%;
+    transform: translate(-50%, -50%);
+  }
+
   button {
     position: absolute;
     background-color: transparent;
     border-color: transparent;
     color: red;
-    font-size: 45px;
+    font-size: 40px;
     font-family: "Cygnito Mono";
     left: 50%;
     transform: translate(-50%, 80%);
@@ -138,6 +147,7 @@
       <p dir-terminal-type="" start-typing="p2" ng-show="p2" on-completion="p3 = true">
         > chiama il numero 331 3087896</p>
 
+    <div id="password">
       <p dir-terminal-type="" remove-caret="0" start-typing="p3" ng-show="p3" on-completion="showInputForm()">
         > password:</p>
 
@@ -147,9 +157,9 @@
 
       <button onclick="goToPage()" ng-show="p4">
         [ CONFERMA ]</button>
-
       <button id="arrendo" onclick="window.location.href= '../Arrendo/index_arrendo.html'" ng-show="p5">
         [ MI ARRENDO ]</button>
+      </div>
 
     </div>
 

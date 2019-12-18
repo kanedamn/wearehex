@@ -19,7 +19,7 @@ preload = function(){
 
 setup = function(){
    	canvas = createCanvas(900, 1000);
-    canvas.position(windowWidth/2 - 450, windowHeight/2 - 550);
+    canvas.position(windowWidth/2 - 450, windowHeight/2 - 500);
    	background(0);
 
     tocco = width/2;
