@@ -54,11 +54,13 @@ draw = function() {
 
   //move car as cursor
   for(var i = 0; i < touches.length; i++){
-    tocco = touches[i].x
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
+  tocco = touches[i].x;
+  ellipse(tocco, windowHeight / 2 - 100, 50);
+  image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+}
+  //
   // if (touches.length > 0) {
-  //   tocco = touches[i].x;
+  //   tocco = touches[0].x;
   //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   // } else {
   //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
@@ -91,12 +93,6 @@ draw = function() {
   text("score: " + finalScore + "/3", width - 350, height/10 - 40);
   pop();
 
-}
-
-function touchStarted() {
-  ellipse(mouseX, mouseY, 5, 5);
-  // prevent default
-  return false;
 }
 
 function Cat() {
