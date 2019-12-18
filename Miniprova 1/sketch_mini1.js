@@ -55,6 +55,10 @@ draw = function() {
   }
 
   //move car as cursor
+  if(muovi == false){
+    tocco = 700;
+    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
 
   // if (touches.length > 0) {
   //   tocco = touches[0].x;
@@ -104,10 +108,6 @@ function touchStarted(){
 
 function touchEnded(){
   muovi = false;
-  if(muovi == false){
-    tocco = 700;
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
 }
 
 function Cat() {
