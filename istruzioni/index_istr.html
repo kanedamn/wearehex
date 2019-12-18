@@ -137,10 +137,10 @@
         > scegli un codice identificativo</p>
 
       <form ng-submit="textEntered()" ng-show="showform">
-        >_ <input type="text" maxlength="3" ng-model="idInput" id="idInput" autofocus>
+        >_ <input type="text" maxlength="3" ng-model="idInput" id="idInput" autofocus on-completion="p8 = true">
       </form>
 
-      <button onclick="goToPage()" ng-show="p7">
+      <button onclick="goToPage()" ng-show="p8">
         [ INIZIA ]</button>
 
     </div>
