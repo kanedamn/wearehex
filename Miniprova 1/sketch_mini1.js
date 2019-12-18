@@ -118,9 +118,9 @@ function Cat() {
   }
 
 //define that the page will not slide when touched
-function touchMoved() {
-  return false;
-}
+// function touchMoved() {
+//   return false;
+// }
 
 function touchEnded(event) {
   DeviceOrientationEvent.requestPermission()
