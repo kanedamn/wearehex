@@ -52,7 +52,7 @@ draw = function() {
     j.display();
   }
 
-  image(macch, mouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  image(macch, pmouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
 
   //move car as cursor
   // if (touches.length > 0) {
