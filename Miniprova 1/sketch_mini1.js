@@ -38,9 +38,6 @@ setup = function(){
 draw = function() {
 
   background(0);
-  if (sghembo == true) {
-    background("red");
-  }
   imageMode(CENTER);
 
   image(strada, width/2, stradaY, strada.width/2, strada.height);
@@ -56,10 +53,13 @@ draw = function() {
   }
 
   //move car as cursor
-  for(var i = 0; i < touches.length; i++){
-  tocco = touches[i].x;
-  image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-}
+//   for(var i = 0; i < touches.length; i++){
+//   tocco = touches[i].x;
+//   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+// }
+
+image(macch, mouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+
   //
   // if (touches.length > 0) {
   //   tocco = touches[0].x;
@@ -112,7 +112,7 @@ function Cat() {
   }
 
   this.dead = function() {
-    var d = dist(tocco, windowHeight / 3, this.x, this.y);
+    var d = dist(mouseX, windowHeight / 3, this.x, this.y);
     if (d < 120) {
       return true;
     } else {
@@ -128,9 +128,4 @@ function Cat() {
 //define that the page will not slide when touched
 function touchMoved() {
   return false;
-}
-var sghembo = false;
-function touchStarted(event) {
-  console.log("event");
-  sghembo = true;
 }
