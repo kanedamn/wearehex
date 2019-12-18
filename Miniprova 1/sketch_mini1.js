@@ -52,21 +52,17 @@ draw = function() {
     j.display();
   }
 
-  for(var i = 0; i < touches.length; i++){
-    image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  //move car as cursor
+  if (touches.length > 0) {
+    tocco = touches[0].x;
+    image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  } else {
+    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   }
 
-  //move car as cursor
-  // if (touches.length > 0) {
-  //   tocco = touches[0].x;
-  //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // } else {
-  //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // }
-  //
-  // for (var i = 0; i < touches.length; i++) {
-  //   image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // }
+  for (var i = 0; i < touches.length; i++) {
+    image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
 
   //what happens when a cat dies
   for (var i = 0; i < cats.length; i++) {
