@@ -38,6 +38,9 @@ setup = function(){
 draw = function() {
 
   background(0);
+  if (sghembo == true) {
+    background("red");
+  }
   imageMode(CENTER);
 
   image(strada, width/2, stradaY, strada.width/2, strada.height);
@@ -56,9 +59,6 @@ draw = function() {
   for(var i = 0; i < touches.length; i++){
   tocco = touches[i].x;
   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  fill("red")
-  text("tocco", width/2, height/2)
-
 }
   //
   // if (touches.length > 0) {
@@ -128,4 +128,9 @@ function Cat() {
 //define that the page will not slide when touched
 function touchMoved() {
   return false;
+}
+var sghembo = false;
+function touchStarted(event) {
+  console.log("event");
+  sghembo = true;
 }
