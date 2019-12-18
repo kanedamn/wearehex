@@ -4,6 +4,8 @@ var tocco;
 var finalScore = 0;
 var font;
 
+var muovi = false;
+
 var gatto;
 var macch;
 var strada;
