@@ -52,7 +52,9 @@ draw = function() {
     j.display();
   }
 
-  image(macch, pmouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  for(var i = 0; i < touches.length; i++){
+    image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
 
   //move car as cursor
   // if (touches.length > 0) {
@@ -88,10 +90,6 @@ draw = function() {
   fill("red");
   text("score: " + finalScore + "/3", width - 350, height/10 - 40);
   pop();
-
-}
-
-function touchStarted(){
 
 }
 
