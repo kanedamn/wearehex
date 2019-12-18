@@ -61,8 +61,7 @@ draw = function() {
   }
 
   if(muovi == true){
-  for(var i = 0; i < touches.length; i++){
-    tocco = touches[i].x;
+    tocco = mouseX;
     image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   }
 }
