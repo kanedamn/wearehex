@@ -60,6 +60,13 @@ draw = function() {
     image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   }
 
+  if(muovi == true){
+  for(var i = 0; i < touches.length; i++){
+    tocco = touches[i].x;
+    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
+}
+
   // if (touches.length > 0) {
   //   tocco = touches[0].x;
   //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
@@ -98,12 +105,6 @@ draw = function() {
 
 function touchStarted(){
   muovi = true;
-  if(muovi == true){
-  for(var i = 0; i < touches.length; i++){
-    tocco = touches[i].x;
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
-}
 }
 
 function touchEnded(){
