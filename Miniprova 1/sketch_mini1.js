@@ -55,8 +55,10 @@ draw = function() {
   //move car as cursor
   for(var i = 0; i < touches.length; i++){
   tocco = touches[i].x;
-  ellipse(tocco, windowHeight / 2 - 100, 50);
   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  fill("red")
+  text("tocco", width/2, height/2)
+
 }
   //
   // if (touches.length > 0) {
