@@ -1,7 +1,7 @@
 var cats = [];
 var amountOfCats = 3;
 var tocco;
-var score = 0;
+var finalScore = 0;
 var font;
 
 var gatto;
@@ -53,12 +53,12 @@ draw = function() {
   }
 
   //move car as cursor
-  if (touches.length > 0) {
-    tocco = touches.x;
-    image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  } else {
-    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  }
+  // if (touches.length > 0) {
+  //   tocco = touches[0].x;
+  //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // } else {
+  //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // }
 
   for (var i = 0; i < touches.length; i++) {
     image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
@@ -68,15 +68,15 @@ draw = function() {
   for (var i = 0; i < cats.length; i++) {
     if (cats[i].dead()) {
       cats.splice(i, 1);
-      score++;
+      finalScore++;
     }
   }
 
-  if(score >= 3 && frameCount > 600){
+  if(finalScore >= 3 && frameCount > 600){
     window.open('../Indizio 1/index_indizio1.html', "_self");
   }
 
-  if(score <= 2 && frameCount > 600){
+  if(finalScore <= 2 && frameCount > 600){
     window.open('../Riprova/index_riprova.html', "_self");
   }
 
@@ -84,7 +84,7 @@ draw = function() {
   textFont(font);
   textSize(45);
   fill("red");
-  text("score: " + score + "/3", width - 350, height/10 - 40);
+  text("score: " + finalScore + "/3", width - 350, height/10 - 40);
   pop();
 
 }
@@ -104,7 +104,7 @@ function Cat() {
   }
 
   this.dead = function() {
-    var d = dist(tocco, windowHeight / 3, this.x, this.y);
+    var d = dist(touches.x, windowHeight / 3, this.x, this.y);
     if (d < 120) {
       return true;
     } else {
@@ -118,10 +118,6 @@ function Cat() {
   }
 
 //define that the page will not slide when touched
-// function touchMoved() {
-//   return false;
-// }
-
-function touchEnded(event) {
-  DeviceOrientationEvent.requestPermission()
+function touchMoved() {
+  return false;
 }
