@@ -56,6 +56,7 @@ draw = function() {
 
   //move car as cursor
   image(macch, mouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+
   // if(muovi == false){
   //   tocco = 700;
   //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
@@ -101,14 +102,6 @@ draw = function() {
   pop();
 
 }
-
-// function touchStarted(){
-//   muovi = true;
-// }
-//
-// function touchEnded(){
-//   muovi = false;
-// }
 
 function Cat() {
   this.x = random(canvas.width - 100, 100);

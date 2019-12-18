@@ -16,10 +16,6 @@ app.controller('MainCtrl', function($scope, $timeout) {
     document.getElementById("myInput").blur();
   }
 
-  goBack = function(){
-    document.getElementById("error").style.opacity = 0;
-  }
-
   goToPage = function(){
     if(document.getElementById("myInput").value == ("iocicredo")){
       window.open('../Indizio 1/index_indizio1.html', "_self");
