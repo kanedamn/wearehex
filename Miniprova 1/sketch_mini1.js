@@ -31,7 +31,7 @@ setup = function(){
 
     stradaY = height;
 
-    var score = localStorage.setItem("score", localStorage.score- 250);
+    var score = localStorage.setItem("score", localStorage.score- 150);
     console.log(score);
 }
 
