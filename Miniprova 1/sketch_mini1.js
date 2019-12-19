@@ -1,6 +1,6 @@
 var cats = [];
 var amountOfCats = 3;
-// var tocco;
+var tocco = 700;
 var finalScore = 0;
 var font;
 
@@ -53,9 +53,8 @@ draw = function() {
     j.move();
     j.display();
   }
-
   //move car as cursor
-  image(macch, mouseX, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  // image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
 
   // if(muovi == false){
   //   tocco = 700;
@@ -67,16 +66,16 @@ draw = function() {
   //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   // }
 
-  // if (touches.length > 0) {
-  //   tocco = touches[0].x;
-  //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // } else {
-  //   image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // }
-  //
-  // for (var i = 0; i < touches.length; i++) {
-  //   image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
-  // }
+  if (touches.length > 0) {
+    tocco = touches[0].x;
+    image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  } else {
+    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
+
+  for (var i = 0; i < touches.length; i++) {
+    image(macch, touches[i].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
 
   //what happens when a cat dies
   for (var i = 0; i < cats.length; i++) {
@@ -86,11 +85,11 @@ draw = function() {
     }
   }
 
-  if(finalScore >= 3 && frameCount > 500){
+  if(finalScore >= 3 && frameCount > 200){
     window.open('../Indizio 1/index_indizio1.html', "_self");
   }
 
-  if(finalScore <= 2 && frameCount > 500){
+  if(finalScore <= 2 && frameCount > 200){
     window.open('../Riprova/index_riprova.html', "_self");
   }
 
@@ -118,7 +117,7 @@ function Cat() {
   }
 
   this.dead = function() {
-    var d = dist(mouseX, windowHeight / 3, this.x, this.y);
+    var d = dist(tocco, windowHeight / 3, this.x, this.y);
     if (d < 120) {
       return true;
     } else {
