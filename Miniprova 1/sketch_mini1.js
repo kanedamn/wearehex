@@ -24,8 +24,6 @@ setup = function(){
     canvas.position(windowWidth/2 - 450, windowHeight/2 - 500);
    	background(0);
 
-    // tocco = 0;
-
     for(var i = 0; i < amountOfCats; i++) {
       var movingCats = new Cat();
       cats.push(movingCats);
@@ -85,11 +83,11 @@ draw = function() {
     }
   }
 
-  if(finalScore >= 3 && frameCount > 200){
+  if(finalScore >= 3 && frameCount > 400){
     window.open('../Indizio 1/index_indizio1.html', "_self");
   }
 
-  if(finalScore <= 2 && frameCount > 200){
+  if(finalScore <= 2 && frameCount > 400){
     window.open('../Riprova/index_riprova.html', "_self");
   }
 
